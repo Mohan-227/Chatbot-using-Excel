@@ -1,13 +1,10 @@
 # app.py
 import streamlit as st
 import pandas as pd
-import seaborn as sns
 import plotly.express as px
-import io
 import re
 from transformers import pipeline
 from difflib import get_close_matches
-
 # --- Load Hugging Face model ---
 st.write("🔧 Loading Hugging Face model...")
 qa_pipeline = pipeline("text2text-generation", model="google/flan-t5-small")
